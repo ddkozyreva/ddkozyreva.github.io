@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <!-- <link rel="shortcut icon" href="https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/CV_icon.ico" type="image/png"> -->
+    <style type="text/css">
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-size: 1.4vw;
+            font-weight: 400;
+            min-width: 16em;
+            overflow-x: hidden;
+            font-family: Malgun Gothic, sans-serif;
+            width: 100%;
+            color: #000;
+            -webkit-font-smoothing: antialiased;
+            display: block;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            background-color: white;
+
+        }
+
+        main {
+            max-width: 48em;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            text-align: justify;
+        }
+
+        content {
+            margin-left: 1em;
+            margin-right: 1em;
+            display: block;
+        }
+
+        .smaller {
+            font-size: 0.9em;
+        }
+
+        div {
+            display: block;
+        }
+
+        p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        #contact_info {
+            height: 9em;
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            color: rgba(00,00,00,0.75);
+            text-decoration: none;
+            /*white-space: nowrap;*/
+
+            cursor: pointer;
+            
+            /*box-shadow: 5px 5px 8px 1px rgba(00,00,00,0.2);*/
+            /*text-shadow: 2px 2px 2px rgba(00,00,00,0.2);*/
+            /*filter: drop-shadow(.1em .1em .1em rgba(00,00,00,0.2));*/
+
+            transition: filter .5s, transform .5s;
+            display: inline-block;
+            background: radial-gradient(rgb(234, 247, 255), rgba(255, 255, 255, 0));
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+
+            text-shadow: none;
+            box-shadow: none;
+            filter: drop-shadow(.1em .1em .1em rgba(00,00,00,0.2));
+            transition: all 0.5s; /*надо убрать изменение размера*/ 
+            /*background-color: burlywood;*/
+            transform: translateY(-.06em);
+            background: transparent;
+        }
+
+        a:after {
+            margin-left: 0.25em;
+            /* background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_icon.svg); */
+            background-size: cover;
+            display: inline-block;
+            width: 1em; 
+            height: 1em;
+            content: "";
+            color: inherit;
+            box-shadow: inherit;
+            
+            filter: inherit;
+            transition: inherit;
+        }
+
+        /* a[href*="https://www.linkedin.com"]::after {
+            background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_LinkedIn.svg);
+        }
+
+        a[href*="https://github.com"]::after {
+            background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_GitHub.svg);
+        }
+
+        a[href*="https://hh.ru"]::after {
+            background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_hh.svg);
+        }
+
+        a[href*="mailto:"]::after {
+            background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_mail.svg);
+        }
+
+        a[href*="https://git.miem.hse.ru"]::after {
+            background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_gitlab.svg);
+        }
+
+        a[href*="https://t.me"]::after {
+            background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_Telegram.svg);
+        } */
+
+        hl {
+            font-size: 1.1em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            display: block;
+            border-bottom: solid .1em rgb(69, 115, 139);
+        }
+
+        h {
+            font-size: 1.1em;
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        ul {
+            list-style-type: disc;
+            list-style-position: outside;
+            margin-left: 1em;;
+        }
+        
+        li {
+            margin-bottom: 0.2em;
+        }
+
+        @media screen and (max-width: 49em) {
+            body {
+                font-size: 80%;
+            }
+
+            main {
+                width: 80%;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            height: .7em;
+            width: .7em;
+            background: transparent;
+            z-index: auto;
+            overflow: visible;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            width: .7em;
+            background-color: rgba(0, 0, 0, 0.3);
+            
+            z-index: auto;
+            border: .17em solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            margin: .17em;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            width: .7em;
+            background-color:rgba(0, 0, 0, 0.5);
+            
+            z-index: auto;
+            border: .1em solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            margin: .1em;
+        }
+
+        ::-webkit-scrollbar-thumb:hover:active {
+            width: .7em;
+            background-color:rgba(0, 0, 0, 0.7);
+            
+            z-index: auto;
+            border: .1em solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            margin: .1em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="contact_info">
+            <div>
+                <p style="font-size: 1.2em; padding-right: 5em;">
+                    <b>
+                        Daria Kozyreva
+                    </b>
+                </p>
+                <p>
+                    23.07.2001
+                </p>
+            </div>
+
+
+            <div class="smaller">
+                <p>
+                    Phone: <a href="tel:+79858642425">+7-985-864-24-25</a>
+                </p>
+                <p>
+                    Email: <a href="mailto:ddkozyreva@edu.hse.ru">ddkozyreva@edu.hse.ru</a>
+                </p>
+                <p>
+                    GitHub: <a href="https://github.com/ddkozyreva" target="_blank">github.com/ddkozyreva</a>
+                </p>
+                <!-- <p>
+                    LinkedIn: <a href="https://www.linkedin.com/in/isplatonov/" target="_blank">linkedin.com/in/isplatonov</a>
+                </p> -->
+                <p>
+                    Telegram: <a href="https://t.me/ddkozyreva" target="_blank">@ddkozyreva</a>
+                </p>
+            </div>
+        </div>
+
+        <hl>Education</hl>
+        <content class="smaller">
+            <h><b>National Research University – Higher School of Economics, Moscow</b></h>
+            <content>
+                <!--: completed Computer Network Design, Network Video Technologies, Web Development and other courses.-->
+                <p><i><u>Bachelor in Applied Mathematics</u>, 2019 – 2023</i></p>
+                <content>
+                    <ul class="round">
+                        <li>Major: Applied Mathematics</li>
+                        <li>Minor: <a href="https://electives.hse.ru/minor_intel/" target="_blank">Intellectual Data Analysis</li></a>
+                    </ul>
+                </content>
+            </content>
+            <h><b>School 21, Moscow</b></h>
+            <content>
+                <i>april 2022 - present</i>
+            </content>
+        </content>
+
+        <hl>Professional experience</hl>
+        <content class="smaller">
+            <h><b><a href="https://wiki.miem.hse.ru/ru/Projects/608" target="_blank">National Research University – Higher School of Economics</a></b></h> 
+            <content>
+                <p><i><u>Research Assistant</u>, january 2022 - present</i></p>
+                <content>
+                    <ul class="round">
+                        <li>Development of software to automate the process of preparing datasets.</li>
+                        <li>Creation of artificial datasets for training. Training and testing trained models.</li>
+                    </ul>
+                </content>
+            </content>
+            
+        </content>
+
+
+
+        <hl>Technical skills</hl>
+        <content class="smaller">
+            <p><u>Python</u>: <i>NumPy, Pandas, Matplotlib, OpenCV, YOLO, PySide, Tkinter</i></p>
+            <p><u>C/C++</u>: <i>CMake, make, Qt </i></p>
+            <p><u>Other</u>: <i>Linux, Bash, Git, SQL, machine and deep learning</i></p>
+        </content>
+
+        <hl>Extra education</hl>
+        <content class="smaller">
+            <ul class="round">
+                <li><a href="https://miem.hse.ru/devops/2022/#:~:text=%D0%9B%D0%B5%D1%82%D0%BD%D1%8F%D1%8F%20%D1%88%D0%BA%D0%BE%D0%BB%D0%B0%20DevOps.
+                    -,%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B8%D0%B7
+                    %D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20CI%2FCD,%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9%20GitLab%2FGitFlow%20%D0%B8%20Docker." 
+                    target="_blank">Summer school “CI/CD and DevOps technologies”</a></li>
+                <li><a href="https://boostcamp.croc.ru/" target="_blank">CROC BoostCamp</a>(business analytics)</li>
+            </ul>
+        </content>
+
+        <hl>Publications and exhibitions</hl>
+        <content class="smaller">
+            <li>Kozyreva, D.D., Minchenkov, V. O. (2023). 
+                Algorithms for artificial segmentation and dataset generation.
+                Yearly Interuniversity scientific-technical conference of students, graduate students and young professionals of E.V. Armensky.                 
+            </li>
+            <li>Soldatov, A.V., Kozyreva, D.D., Mazikov, Y.A., Lukashov, S.A. (2022).
+                Development of a recognition system (ML) and intelligent control of manual operations in industrial production. 
+                HSE TechnoShow.</a></li>
+            <!-- <li>Soldatov, A.V., Kozyreva, D.D., Mazikov, Y.A., Lukashov, S.A. (2022). 
+                Study of methods for background segmentation in image.
+                Yearly Interuniversity scientific-technical conference of students, graduate students and young professionals of E.V. Armensky, 116-122.</li> -->
+
+        </content>
+
+    </main>
+</body>
+
+</html>
